@@ -1,21 +1,16 @@
-#include<Servo.h>
-Servo s1;
-int pos =0;
+//code by Akash Das
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  s1.attach(9);
+  
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  int lt=analogRead(A0);
+  int lt=analogRead(A0);//reading analog values from LDR
   
-  Serial.println(lt);
-  if(lt<20)
-  s1.write(50);
-  else 
-  s1.write(0);
+  Serial.println(lt);//for printing in serial monitor
+  
   
   
 }
